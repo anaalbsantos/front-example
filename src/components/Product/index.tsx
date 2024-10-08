@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import { ImageField, ProductContainer, TextField } from './style';
-// import { Logo } from 'assets';
+import { ProductContainer, TextField, ImageField } from './style'; // Adicionei ImageWrapper para estilizar a imagem
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
@@ -9,22 +8,25 @@ const montserrat = Montserrat({
 });
 
 export interface ProductProps {
-  image: string;
   name: string;
   value: number;
+  description: string;
+  imageUrl: string; // Novo campo para a URL da imagem
 }
 
-const Product = ({ image, name, value }: ProductProps) => {
+const Product = ({ name, value, description, imageUrl }: ProductProps) => {
   return (
     <ProductContainer className={montserrat.className}>
       <ImageField>
-        <Image src={image} alt="image" width={200} />
+        <Image src={imageUrl} alt={name} width={200} />
       </ImageField>
       <TextField>
         <h2>{name}</h2>
-        <p>R$ {value}</p>
+        <p>{description}</p>
+        <span>${value.toFixed(2)}</span>
       </TextField>
     </ProductContainer>
   );
 };
+
 export default Product;
