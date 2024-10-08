@@ -6,6 +6,13 @@ module.exports = {
     styledComponents: true
   },
   images: {
-    domains: ['photos.google.com', 'drive.google.com']
-  }
+    domains: ['photos.google.com', 'drive.google.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.google.com',
+        pathname: '/uc?export=view&id=*'
+      },
+    ],
+  },
 };
