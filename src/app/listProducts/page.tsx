@@ -17,12 +17,11 @@ const ListProducts = ({}: ListProductsProps) => {
         <h1>✦ todos os produtos ✦</h1>
       </Title>
       <AllProducts>
-        <Product image="" name="blusinha" value={100}></Product>
-        <Product image="" name="blusinha" value={100}></Product>
-        <Product image="" name="blusinha" value={100}></Product>
-        <Product image="" name="blusinha" value={100}></Product>
-        <Product image="" name="blusinha" value={100}></Product>
-        <Product image="" name="blusinha" value={100}></Product>
+        <Product
+          image="https://drive.google.com/uc?export=view&id=1UW2t1pxvohY8OtNKan2AiiaZ-JNi0hss"
+          name="blusinha"
+          value={100}
+        ></Product>
       </AllProducts>
     </ListProductsContainer>
   );

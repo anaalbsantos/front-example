@@ -18,7 +18,7 @@ const Product = ({ image, name, value }: ProductProps) => {
   return (
     <ProductContainer className={montserrat.className}>
       <ImageField>
-        <Image src={image} alt="image" width={200} />
+        <Image src={image} alt="image" width={200} height={130} />
       </ImageField>
       <TextField>
         <h2>{name}</h2>
